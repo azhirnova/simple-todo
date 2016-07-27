@@ -40,9 +40,16 @@ router.post('/todo', function* (next) {
 });
 
 // Toggle todo route
-router.get('/toggle_todo/:id', function* (next) {
+router.get('/toggle-todo/:id', function* (next) {
     var id = this.params.id;
     todos[id].done = !todos[id].done;
+    this.redirect('/');
+});
+
+// Remove todo route
+router.get('/remove-todo/:id', function* (next) {
+    var id = this.params.id;
+    delete todos[id];
     this.redirect('/');
 });
 

@@ -26,7 +26,8 @@
         <ul>
             <% todos.forEach(function(todo) { %>
                 <li class=<%=todo.done ? "done" : "" %>>
-                    <a class='todo' href='/toggle_todo/<%= todo.id %>'><%= todo.text %></a>
+                    <a class='todo' href='/toggle-todo/<%= todo.id %>'><%= todo.text %></a>
+                    <a class='remove-todo' href='/remove-todo/<%= todo.id %>'><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
                 </li>
             <% }); %>
         </ul>

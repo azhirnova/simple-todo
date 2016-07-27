@@ -28,6 +28,12 @@ ul {
     text-align: left;
 }
 
+.remove-todo {
+    position: relative;
+    top: 2px;
+    margin: 0 5px;
+}
+
 /*************/
 /* Typography*/
 /*************/
@@ -63,4 +69,8 @@ form input {
 .todo:hover {
     color: #333;
     text-decoration: none;
+}
+
+.remove-todo {
+    color: transparent;
 }
