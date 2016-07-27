@@ -2,24 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Whiteboard</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Simple todo app</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Knewave">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 </head>
 
 <body>
-    <h1>To do</h1>
 
-    <form action="todo" method="post">
-        <input type="text" name="todo" placeholder="Enter your todo"></input>
-    </form>
+    <header>
+        <a href='/'>Todo app</a>
+    </header>
 
-    <ul>
-        <% todos.forEach(function(todo) { %>
-            <li class=<%=todo.done ? "done" : "" %>>
-                <a class='todo' href='/toggle_todo/<%= todo.id %>'><%= todo.text %></a>
-            </li>
-        <% }); %>
-    </ul>
+    <section>
+        <h1>Get organised!</h1>
+        <p>Use this list to plan out your tasks for the day.</p>
+
+        <form action="todo" method="post">
+            <input type="text" name="todo" placeholder="Enter your todo"></input>
+        </form>
+
+        <ul>
+            <% todos.forEach(function(todo) { %>
+                <li class=<%=todo.done ? "done" : "" %>>
+                    <a class='todo' href='/toggle_todo/<%= todo.id %>'><%= todo.text %></a>
+                </li>
+            <% }); %>
+        </ul>
+    </section>
 
 </body>
