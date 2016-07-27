@@ -39,9 +39,10 @@ router.post('/todo', function* (next) {
     this.redirect('/');
 });
 
-// Complete todo route
-router.get('/complete_todo/:id', function* (next) {
-    todos[this.params.id].done = true;
+// Toggle todo route
+router.get('/toggle_todo/:id', function* (next) {
+    var id = this.params.id;
+    todos[id].done = !todos[id].done;
     this.redirect('/');
 });
 

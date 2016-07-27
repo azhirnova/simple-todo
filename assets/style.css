@@ -1,0 +1,12 @@
+.done {
+    text-decoration: line-through;
+}
+
+.todo {
+    color: #333;
+}
+
+.todo:hover {
+    color: #333;
+    text-decoration: none;
+}

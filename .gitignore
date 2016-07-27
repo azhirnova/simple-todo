@@ -1,6 +1,5 @@
 # Directories #
 ###############
-assets/
 node_modules/
 
 # OS generated files #
