@@ -30,12 +30,16 @@ router.get('/', function* (next) {
 // New todo route
 router.post('/todo', function* (next) {
     var todo = this.request.body.todo;
-    todos.push({
-        id: count,
-        text: todo,
-        done: false
-    });
-    count++;
+
+    if (todo) {
+        todos.push({
+            id: count,
+            text: todo,
+            done: false
+        });
+        count++;
+    }
+
     this.redirect('/');
 });
 
