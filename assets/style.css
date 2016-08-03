@@ -32,9 +32,19 @@ li {
     list-style-type: none;
 }
 
-li.well {
+.todo-item.well {
     margin-bottom: 10px;
     padding: 10px;
+    display: flex;
+}
+
+.todo-item.well span {
+    flex: 1 1 auto;
+}
+
+.todo-item.well a {
+    flex: 0 0 auto;
+    padding-left: 10px;
 }
 
 /*************/
@@ -59,8 +69,25 @@ section {
 
 form input {
     border-color: #19b5fE;
+    border-radius: 4px;
 }
 
 .done {
     text-decoration: line-through;
+}
+
+.complete-todo {
+    color: #00b16a;
+}
+
+.complete-todo:hover {
+    color: #1e824c;
+}
+
+.remove-todo {
+    color: #d91e18;
+}
+
+.remove-todo:hover {
+    color: #c0392b;
 }
