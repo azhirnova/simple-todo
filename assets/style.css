@@ -10,8 +10,7 @@ header {
 }
 
 section {
-    margin: 0 auto;
-    max-width: 400px;
+    max-width: 600px;
     text-align: center;
 }
 
@@ -26,12 +25,16 @@ form input {
 
 ul {
     text-align: left;
+    padding-left: 0;
 }
 
-.remove-todo {
-    position: relative;
-    top: 2px;
-    margin: 0 5px;
+li {
+    list-style-type: none;
+}
+
+li.well {
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 /*************/
@@ -60,17 +63,4 @@ form input {
 
 .done {
     text-decoration: line-through;
-}
-
-.todo {
-    color: #333;
-}
-
-.todo:hover {
-    color: #333;
-    text-decoration: none;
-}
-
-.remove-todo {
-    color: transparent;
 }
